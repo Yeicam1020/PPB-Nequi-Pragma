@@ -17,12 +17,19 @@ Exponer endpoint que permita mostrar cuál es el producto que más stock tiene p
 que indique a qué sucursal pertenece. Utilizar sistemas de persistencia de datos como Redis, MySQL, MongoDB, Dynamo en algún proveedor de Nube. Queda abierto a libre escogencia.
 
 Puntos Extra
+
 ✅ Plus si se empaqueta la aplicación con Docker.
+
 ✅ Plus si utiliza programación funcional, reactiva.
+
 ✅ Plus si se expone endpoint que permita actualizar el nombre de una franquicia.
+
 ✅ Plus si se expone endpoint que permita actualizar el nombre de una sucursal.
+
 ✅ Plus si se expone endpoint que permita actualizar el nombre de un producto.
+
 ✅ Plus si se aprovisiona la persistencia de datos con infraestructura como código como Terraform, Cloudformation, etc.
+
 ✅ Plus si toda la solución se despliega en la nube.
 
 Notas Importantes:
@@ -30,6 +37,6 @@ Se tendrá en cuenta el flujo de trabajo usando Git.
 La prueba debe ser presentada en algún repositorio de código con acceso público (GitHub, Bitbucket, etc.).
 Se debe incluir documentación que permita entender cómo desplegar la aplicación desde un entorno local. Se sugiere utilizar un archivo README.md.
 
-##Requerimientos para su uso
+## Requerimientos para su uso
 - Java 17
 - Maven
