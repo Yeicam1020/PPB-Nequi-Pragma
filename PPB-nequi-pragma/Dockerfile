@@ -13,8 +13,8 @@ FROM openjdk:17-jdk-slim
 
 WORKDIR /app
 
-COPY --from=build /app/target/franquicias-0.0.1-SNAPSHOT.jar franquicias.jar
+COPY --from=build /app/target/PPB-nequi-pragma-0.0.1-SNAPSHOT.jar app.jar
 
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "franquicias.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
