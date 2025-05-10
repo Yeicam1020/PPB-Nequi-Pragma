@@ -28,7 +28,7 @@ public class FranquiciaService {
         return franquiciaRepo.deleteById(id);
     }
 
-    public Mono<Franquicia> actualizarNombreSucursal(Long id, String newName) {
+    public Mono<Franquicia> actualizarNombreFranquicia(Long id, String newName) {
         return franquiciaRepo.findById(id)
                 .flatMap(franquicia -> {
                     franquicia.setNombre(newName);

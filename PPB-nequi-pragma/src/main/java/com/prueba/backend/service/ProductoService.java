@@ -42,7 +42,7 @@ public class ProductoService {
                 .next();
     }
 
-    public Mono<Producto> updateProductName(Long productoId, String newName) {
+    public Mono<Producto> actualizarNombreProducto(Long productoId, String newName) {
         return productoRepo.findById(productoId)
                 .flatMap(product -> {
                     product.setNombre(newName);
