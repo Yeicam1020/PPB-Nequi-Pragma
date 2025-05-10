@@ -40,3 +40,23 @@ Se debe incluir documentación que permita entender cómo desplegar la aplicaci�
 ## Requerimientos para su uso
 - Java 17
 - Maven
+- Docker
+
+## Configuración entorno local
+- clonar: https://github.com/Yeicam1020/PPB-Nequi-Pragma.git
+- Dentro del directorio: mvn clean install
+- Todo listo, a correr
+
+### Nota adicional
+El proyecto está ya configurado desde el archivo de propiedad para conectarse a una RDS, sin embargo, le comparto credenciales de acceso a la BD MySQL:
+- HOST: pruebas-yeicam.c1qsigweaaa9.us-east-2.rds.amazonaws.com
+- PORT: 3306
+- NOMBRE BASE DE DATOS: franquicias_database
+- USER: root
+- PASS: root2025
+
+## Configuración para Docker (copiar y pegar)
+- Construir imagen: docker build -t franquicias-app .
+- Ejecutar el contenedor : docker run -d -p 8080:8080 franquicias-app
+
+## Puede utilizar Postman o su herramienta de preferencia para consumir los endpoints, collections en el resources
