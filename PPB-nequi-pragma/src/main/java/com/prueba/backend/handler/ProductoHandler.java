@@ -33,7 +33,7 @@ public class ProductoHandler {
     public Mono<ServerResponse> eliminarProducto(ServerRequest request) {
         Long productoId = Long.valueOf(request.pathVariable("id"));
         return productoService.eliminarProducto(productoId)
-                .then(ServerResponse.noContent().build());
+                .then(ServerResponse.ok().bodyValue("Se eliminó correctamente"));
     }
 
     public Mono<ServerResponse> getMaxStockProducto(ServerRequest request) {

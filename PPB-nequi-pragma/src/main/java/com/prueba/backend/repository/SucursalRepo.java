@@ -7,5 +7,5 @@ import reactor.core.publisher.Flux;
 
 @Repository
 public interface SucursalRepo extends ReactiveCrudRepository<Sucursal, Long> {
-    Flux<Sucursal> findByFranquicialId(Long franquicialId);
+    Flux<Sucursal> findByFranquiciaId(Long franquiciaId);
 }

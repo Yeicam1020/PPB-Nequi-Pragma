@@ -37,6 +37,6 @@ public class SucursalService {
     }
 
     public Flux<Sucursal> getSucursalesByFranquiciaId(Long franquiciaId) {
-        return sucursalRepo.findByFranquicialId(franquiciaId);
+        return sucursalRepo.findByFranquiciaId(franquiciaId);
     }
 }

@@ -22,14 +22,14 @@ public class RouterConfig {
         return RouterFunctions
                 .route(POST("/sucursales"), sucursalHandler::anadirSucursal)
                 .andRoute(PUT("/sucursales/{id}/name"), sucursalHandler::actualizarNombreSucursal)
-                .andRoute(GET("/sucursales/{sucursalId}"), sucursalHandler::getSucursalesByFranquiciaId)
+                .andRoute(GET("/sucursales/{franquiciaId}"), sucursalHandler::getSucursalesByFranquiciaId)
                 .andRoute(POST("/franquicias"), franquiciaHandler::anadirFranquicia)
                 .andRoute(PUT("/franquicias/{id}/name"), franquiciaHandler::actualizarNombreFranquicia )
                 .andRoute(GET("/franquicias/{id}"), franquiciaHandler::getFranquiciaById)
                 .andRoute(POST("/productos"), productoHandler::anadirProducto)
                 .andRoute(PUT("/productos/{id}/stock"), productoHandler::actualizarProductoStock)
                 .andRoute(DELETE("/productos/{id}"), productoHandler::eliminarProducto)
-                .andRoute(GET("/productos/maxStock/{branchId}"), productoHandler::getMaxStockProducto   )
+                .andRoute(GET("/productos/maxStock/{sucursalId}"), productoHandler::getMaxStockProducto   )
                 .andRoute(PUT("/productos/{id}/name"), productoHandler::actualizarNombreProducto);
     }
 }
