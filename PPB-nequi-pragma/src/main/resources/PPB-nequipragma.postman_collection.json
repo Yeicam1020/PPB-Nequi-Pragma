@@ -1,0 +1,374 @@
+{
+	"info": {
+		"_postman_id": "87e9360a-471c-472a-af2a-c3c14ff4ece3",
+		"name": "PPB-nequipragma",
+		"description": "Colección sobre la prueba realizada",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27012307"
+	},
+	"item": [
+		{
+			"name": "Agregar una nueva franquicia",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nombre\": \"Franquicia Ejemplo 4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "ec2-3-12-151-166.us-east-2.compute.amazonaws.com:8080/franquicias",
+					"host": [
+						"ec2-3-12-151-166",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"franquicias"
+					]
+				},
+				"description": "Generated from cURL: curl --request POST  \n\\--url ec2-3-12-151-166.us-east-2.compute.amazonaws.com:8080/franquicias  \n\\--header 'Content-Type: application/json'  \n\\--data '{  \n\"nombre\": \"Franquicia Ejemplo 4\"  \n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar nueva sucursal a una franquicia",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Sucursal 3A\",\r\n  \"franquiciaId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "ec2-3-12-151-166.us-east-2.compute.amazonaws.com:8080/sucursales",
+					"host": [
+						"ec2-3-12-151-166",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"sucursales"
+					]
+				},
+				"description": "Generated from cURL: curl --request POST  \n\\--url ec2-3-12-151-166.us-east-2.compute.amazonaws.com:8080/sucursales\n\n\\--header 'Content-Type: application/json'  \n\\--data '{  \n\"nombre\": \"Sucursal 3A\",  \n\"franquiciaId\": 1  \n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar nuevo producto a una sucursal",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Producto Ejemplo 13\",\r\n    \"stock\": 200,\r\n    \"sucursalId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "ec2-3-12-151-166.us-east-2.compute.amazonaws.com:8080/productos",
+					"host": [
+						"ec2-3-12-151-166",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"productos"
+					]
+				},
+				"description": "Generated from cURL: curl --request POST  \n\\--url ec2-3-12-151-166.us-east-2.compute.amazonaws.com:8080/productos\n\n\\--header 'Content-Type: application/json'  \n\\--data '{  \n\"nombre\": \"Producto Ejemplo 13\",  \n\"stock\": 200,  \n\"sucursalId\": 1  \n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar un nuevo producto a una sucursal",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "ec2-3-12-151-166.us-east-2.compute.amazonaws.com:8080/productos/15",
+					"host": [
+						"ec2-3-12-151-166",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"productos",
+						"15"
+					]
+				},
+				"description": "Generated from cURL: curl --request DELETE  \n\\--url ec2-3-12-151-166.us-east-2.compute.amazonaws.com:8080/productos/15"
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar el stock de un producto",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "200",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "ec2-3-12-151-166.us-east-2.compute.amazonaws.com:8080/productos/1/stock",
+					"host": [
+						"ec2-3-12-151-166",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"productos",
+						"1",
+						"stock"
+					]
+				},
+				"description": "Generated from cURL: curl --request PUT  \n\\--url\n\nec2-3-12-151-166.us-east-2.compute.amazonaws.com:8080/productos/1/stock\n\n\\--header 'Content-Type: application/json'  \n\\--data '200'"
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener el producto con el máximo stock de una sucursal",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "ec2-3-12-151-166.us-east-2.compute.amazonaws.com:8080/productos/maxStock/6",
+					"host": [
+						"ec2-3-12-151-166",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"productos",
+						"maxStock",
+						"6"
+					]
+				},
+				"description": "Generated from cURL: curl --request GET  \n\\--url ec2-3-12-151-166.us-east-2.compute.amazonaws.com:8080/productos/maxStock/6"
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar el nombre de una franquicia",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "Franquicia1 actualizada",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "ec2-3-12-151-166.us-east-2.compute.amazonaws.com:8080/franquicias/1/name",
+					"host": [
+						"ec2-3-12-151-166",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"franquicias",
+						"1",
+						"name"
+					]
+				},
+				"description": "Generated from cURL: curl --request PUT  \n\\--url ec2-3-12-151-166.us-east-2.compute.amazonaws.com:8080/franquicias/1/name\n\n\\--header 'Content-Type: application/json'  \n\\--data '\"Franquicia1 actualizada\"'"
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar el nombre de una sucursal",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "Sucursal 1A actualizada",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "ec2-3-12-151-166.us-east-2.compute.amazonaws.com:8080/sucursales/1/name",
+					"host": [
+						"ec2-3-12-151-166",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"sucursales",
+						"1",
+						"name"
+					]
+				},
+				"description": "Generated from cURL: curl --request PUT  \n\\--url ec2-3-12-151-166.us-east-2.compute.amazonaws.com:8080/sucursales/1/name\n\n\\--header 'Content-Type: application/json'  \n\\--data '\"Sucursal 1A actualizada\"'"
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar el nombre de un producto",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "Producto 1 actu",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "ec2-3-12-151-166.us-east-2.compute.amazonaws.com:8080/1/name",
+					"host": [
+						"ec2-3-12-151-166",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"1",
+						"name"
+					]
+				},
+				"description": "Generated from cURL: curl --request PUT  \n\\--url ec2-3-12-151-166.us-east-2.compute.amazonaws.com:8080/1/name\n\n\\--header 'Content-Type: application/json'  \n\\--data '\"Producto 1 actu\"'"
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener una franquicia por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "ec2-3-12-151-166.us-east-2.compute.amazonaws.com:8080/franquicias/1",
+					"host": [
+						"ec2-3-12-151-166",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"franquicias",
+						"1"
+					]
+				},
+				"description": "Generated from cURL: curl --request GET  \n\\--url ec2-3-12-151-166.us-east-2.compute.amazonaws.com:8080/franquicias/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener todas las sucursales de una franquicia",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "ec2-3-12-151-166.us-east-2.compute.amazonaws.com:8080/sucursales/1",
+					"host": [
+						"ec2-3-12-151-166",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"sucursales",
+						"1"
+					]
+				},
+				"description": "Generated from cURL: curl --request GET  \n\\--url ec2-3-12-151-166.us-east-2.compute.amazonaws.com:8080/sucursales/1"
+			},
+			"response": []
+		}
+	]
+}
