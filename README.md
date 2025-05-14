@@ -60,3 +60,6 @@ El proyecto está ya configurado desde el archivo de propiedad para conectarse a
 - Ejecutar el contenedor : docker run -d -p 8080:8080 franquicias-app
 
 ## Puede utilizar Postman o su herramienta de preferencia para consumir los endpoints, collections en el resources
+## Se realizó despliegue y ahora se puede consumir "ec2-3-12-151-166.us-east-2.compute.amazonaws.com" (se ajustó la colección postman para solo consumir)
+
+
